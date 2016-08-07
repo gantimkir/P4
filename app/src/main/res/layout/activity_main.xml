@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.kirill.p4.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App P4!"
+        android:id="@+id/textHeader" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity 1"
+        android:id="@+id/textActivity1"
+        android:layout_below="@+id/textHeader"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Activity 2"
+        android:id="@+id/buttonGoToActivity2"
+        android:layout_below="@+id/textActivity1"
+        android:onClick="onClick"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Activity 3"
+        android:id="@+id/buttonGoToActivity3"
+        android:onClick="onClick"
+        android:layout_below="@+id/checkBox_EditActivity3Message"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_Activity3_SendMessage"
+        android:layout_below="@+id/buttonGoToActivity2"
+        android:layout_centerHorizontal="true"
+        android:background="#ee7878"
+        android:text="Message from Activity #1"
+        android:enabled="false"
+        android:onClick="onClick"
+        android:inputType="none" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="allow edit"
+        android:id="@+id/checkBox_EditActivity3Message"
+        android:layout_below="@+id/editText_Activity3_SendMessage"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to Activity 4"
+        android:id="@+id/buttonGoToActivity4"
+        android:onClick="onClick"
+        android:layout_alignParentStart="true"
+        android:layout_weight="2"
+        android:layout_below="@+id/buttonGoToActivity3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity1_orientation"
+        android:id="@+id/buttonOrientation"
+        android:onClick="onClick"
+        android:layout_below="@+id/buttonGoToActivity3"
+        android:layout_alignRight="@+id/buttonGoToActivity3"
+        android:layout_toEndOf="@id/buttonGoToActivity4" />
+
+
+</RelativeLayout>
