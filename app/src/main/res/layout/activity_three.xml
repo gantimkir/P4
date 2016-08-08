@@ -23,15 +23,25 @@
         android:layout_height="wrap_content"
         android:text="checked"
         android:id="@+id/checkBox_ReadMessageFromActivity1"
-        android:layout_below="@+id/textView_activity3_tv"
-        android:layout_alignEnd="@+id/textView_activity3_tv" />
+        android:layout_alignBottom="@+id/button_ReadAndExit"
+        android:layout_toStartOf="@+id/textView_activity3_tv"
+        android:layout_below="@+id/textView_activity3_tv" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Close"
         android:id="@+id/button_ReadAndExit"
-        android:layout_below="@+id/checkBox_ReadMessageFromActivity1"
-        android:layout_alignStart="@+id/textView_activity3_tv"
+        android:onClick="onClick"
+        android:layout_below="@+id/textView_activity3_tv"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Advanced Toast"
+        android:id="@+id/buttonAdvancedToast"
+        android:layout_below="@+id/button_ReadAndExit"
+        android:layout_centerHorizontal="true"
         android:onClick="onClick" />
 </RelativeLayout>
