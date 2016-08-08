@@ -11,7 +11,7 @@
     <string name="activity3_title">Activity #3</string>
     <string name="activity3_tv">This is Activity #3</string>
     <string name="activity4_title">Activity #4</string>
-    <string name="activity4_tv">This is Activity #4. Launched by intent-filter</string>
+    <string name="activity4_tv">This is Activity #4. Launched by intent-filter!!!</string>
     <string name="activity1_orientation">Orientation</string>
 
 </resources>
