@@ -83,5 +83,14 @@
         android:layout_alignRight="@+id/buttonGoToActivity3"
         android:layout_toEndOf="@id/buttonGoToActivity4" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/buttonGoToActivity5"
+        android:layout_below="@+id/buttonGoToActivity4"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick" />
+
 
 </RelativeLayout>

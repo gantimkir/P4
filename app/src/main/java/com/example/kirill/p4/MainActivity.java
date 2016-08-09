@@ -95,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
                  else {
                     Toast.makeText(this, "ORIENTATION_LANDSCAPE. "+stringRotation, Toast.LENGTH_LONG).show();
                 }
-////                Toast.makeText(this, getResources().getConfiguration().orientation, Toast.LENGTH_LONG).show();
-//                Toast.makeText(this, "!!!", Toast.LENGTH_LONG).show();
-//                break;
+            case R.id.buttonGoToActivity5:
+                intent.setClass(MainActivity.this,ActivityFive.class);
+                startActivity(intent);
         }
     }
 }
