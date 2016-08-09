@@ -13,4 +13,12 @@
     tools:showIn="@layout/activity_five"
     tools:context="com.example.kirill.p4.ActivityFive">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dismiss"
+        android:id="@+id/buttonDismiss"
+        android:onClick="onClick"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
