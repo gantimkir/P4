@@ -55,4 +55,30 @@
         android:textSize="20dp"
         android:textAlignment="center" />
 
+    <Button
+        android:id="@+id/buttonShowPopUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Показать меню"
+        android:onClick="onClick"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@id/buttonAdvancedToast" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A TextView"
+        android:layout_alignEnd="@id/buttonAdvancedToast"
+        android:layout_alignParentEnd="false"
+        android:layout_alignBaseline="@+id/buttonShowPopUp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cat_bottom"
+        android:layout_below="@+id/textviewMenuExplorer"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
