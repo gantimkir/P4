@@ -81,4 +81,14 @@
         android:layout_below="@+id/textviewMenuExplorer"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:id="@+id/buttonShowNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notification"
+        android:onClick="onClick"
+        android:layout_below="@+id/buttonShowPopUp"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/buttonShowPopUp" />
+
 </RelativeLayout>

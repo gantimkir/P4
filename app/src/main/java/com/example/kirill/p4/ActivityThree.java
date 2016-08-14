@@ -1,8 +1,15 @@
 package com.example.kirill.p4;
 
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
 import android.view.Gravity;
 import android.view.Menu;
@@ -16,6 +23,7 @@ import android.widget.Toast;
 
 public class ActivityThree extends AppCompatActivity {
     public final static String READ_CODE = "com.example.kirill.p4.RES_CODE";
+    private static final int NOTIFY_ID = 101;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +96,26 @@ public class ActivityThree extends AppCompatActivity {
                 break;
             case R.id.buttonShowPopUp:
                 showPopupMenu(view);
+                break;
+            case R.id.buttonShowNotification:
+                Context context = getApplicationContext();
+                Intent notificationIntent = new Intent(context, MainActivity.class);
+                PendingIntent contentIntent = PendingIntent.getActivity(context,
+                        0, notificationIntent,
+                        PendingIntent.FLAG_CANCEL_CURRENT);
+                Resources res = context.getResources();
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
+// оставим только самое необходимое
+                builder.setContentIntent(contentIntent)
+                        .setSmallIcon(R.drawable.catdroid)
+                        .setContentTitle("Напоминание")
+                        .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.cat_bottom))
+                        .setContentText("Пора покормить кота"); // Текст уведомления
+
+                Notification notification = builder.build();
+
+                NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+                notificationManager.notify(NOTIFY_ID, notification);
                 break;
         }
 
