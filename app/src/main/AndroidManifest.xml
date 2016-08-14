@@ -38,6 +38,7 @@
             android:name=".ActivitySix"
             android:label="@string/title_activity_activity_six"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivitySeven"></activity>
     </application>
 
 </manifest>

@@ -103,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(MainActivity.this,ActivitySix.class);
                 startActivity(intent);
                 break;
+            case R.id.buttonGoToActivity7:
+                intent.setClass(MainActivity.this,ActivitySeven.class);
+                startActivity(intent);
+                break;
 
         }
     }
