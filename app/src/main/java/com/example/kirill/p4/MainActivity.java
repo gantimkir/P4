@@ -1,9 +1,13 @@
 package com.example.kirill.p4;
 
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Surface;
 import android.view.View;
 import android.widget.CheckBox;
@@ -107,7 +111,83 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(MainActivity.this,ActivitySeven.class);
                 startActivity(intent);
                 break;
-
+            case R.id.buttonGoToActivity8:
+                intent.setClass(MainActivity.this,ActivityEight.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonGoToActivity9:
+                intent.setClass(MainActivity.this,ActivityNine.class);
+                startActivity(intent);
+                break;
+            case R.id.buttonGoToActivity10:
+                intent.setClass(MainActivity.this,ActivityTen.class);
+                startActivity(intent);
+                break;
         }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        // super.onBackPressed();
+        openQuitDialog();
+    }
+
+    private void openQuitDialog() {
+        AlertDialog.Builder quitDialog = new AlertDialog.Builder(
+                this);
+        quitDialog.setTitle("Выход: Вы уверены?");
+
+        quitDialog.setPositiveButton("Таки да!", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // TODO Auto-generated method stub
+                finish();
+            }
+        });
+
+        quitDialog.setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // TODO Auto-generated method stub
+            }
+        });
+
+        quitDialog.show();
+    }
+
+    @Override
+    protected void onUserLeaveHint() {
+        Toast toast = Toast.makeText(getApplicationContext(), "Нажата кнопка HOME", Toast.LENGTH_SHORT);
+        toast.show();
+        super.onUserLeaveHint();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // TODO Auto-generated method stub
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_MENU:
+                Toast.makeText(this, "Нажата кнопка Меню", Toast.LENGTH_SHORT)
+                        .show();
+                return true;
+            case KeyEvent.KEYCODE_SEARCH:
+                Toast.makeText(this, "Нажата кнопка Поиск", Toast.LENGTH_SHORT)
+                        .show();
+                return true;
+            case KeyEvent.KEYCODE_BACK:
+                onBackPressed();
+                return true;
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                event.startTracking();
+                Toast.makeText(this, "Нажата кнопка громкости", Toast.LENGTH_SHORT).show();
+                return false;
+            case KeyEvent.KEYCODE_VOLUME_DOWN:
+                Toast.makeText(this, "Нажата кнопка громкости", Toast.LENGTH_SHORT)
+                        .show();
+                return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

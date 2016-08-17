@@ -14,7 +14,7 @@
     <string name="activity1_orientation">!!!Orientation!!!</string>
     <string name="title_activity_activity_five">ActivityFive</string>
     <string name="action_cat_male">Кот</string>
-    <string name="action_cat_female">Кися</string>
+    <string name="action_cat_female">Кошка</string>
     <string name="action_kitten">Котёнок</string>
     <string name="title_activity_activity_six">ActivitySix</string>
 
@@ -22,7 +22,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
-    <string name="app_name">P4 (38 pop)</string>
+    <string name="app_name">P4 (38 попугаев)</string>
     <string name="radiobutton_meters">В метрах</string>
     <string name="radiobutton_parrots">В попугаях</string>
     <string name="buttonConvert_text">Конвертировать</string>
