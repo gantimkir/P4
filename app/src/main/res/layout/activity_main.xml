@@ -141,6 +141,14 @@
         android:layout_below="@+id/buttonGoToActivity8"
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@+id/buttonGoToActivity8" />
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Activity 9 (my pref)"
+        android:id="@+id/buttonGoToMyPref"
+        android:onClick="onClick"
+        android:layout_below="@+id/buttonGoToActivity9"
+        android:layout_alignLeft="@+id/buttonGoToActivity9"
+        android:layout_alignRight="@+id/buttonGoToActivity9" />
 
 </RelativeLayout>

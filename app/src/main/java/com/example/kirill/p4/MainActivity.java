@@ -123,9 +123,12 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(MainActivity.this,ActivityTen.class);
                 startActivity(intent);
                 break;
+            case R.id.buttonGoToMyPref:
+                intent.setClass(MainActivity.this,MyPreferenceActivity.class);
+                startActivity(intent);
+                break;
         }
     }
-
 
     @Override
     public void onBackPressed() {
@@ -159,8 +162,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onUserLeaveHint() {
-        Toast toast = Toast.makeText(getApplicationContext(), "Нажата кнопка HOME", Toast.LENGTH_SHORT);
-        toast.show();
+//        Toast toast = Toast.makeText(getApplicationContext(), "Нажата кнопка HOME", Toast.LENGTH_SHORT);
+//        toast.show();
         super.onUserLeaveHint();
     }
 

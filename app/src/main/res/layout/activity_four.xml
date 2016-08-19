@@ -29,4 +29,32 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera #1"
+        android:id="@+id/buttonCamera1"
+        android:layout_below="@+id/textViewOrientationCounter"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_toEndOf="@+id/buttonCamera1"
+        android:layout_below="@+id/textViewOrientationCounter"
+        android:layout_toRightOf="@+id/buttonCamera1"
+        android:layout_alignRight="@+id/textViewOrientationCounter"
+        android:layout_alignBottom="@+id/buttonCamera1" />
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Save Int Pref"-->
+        <!--android:id="@+id/buttonSaveIntPref"-->
+        <!--android:onClick="onClick"-->
+        <!--android:layout_toEndOf="@+id/editTextIntPref"-->
+        <!--android:layout_alignBottom="@+id/editTextIntPref" />-->
+
 </RelativeLayout>
