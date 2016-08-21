@@ -38,13 +38,13 @@
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Camera #1"
-        android:id="@+id/buttonCamera1"
         android:layout_below="@+id/textViewOrientationCounter"
-        android:layout_alignParentStart="true"
-        android:onClick="onClick" />
+        android:inputType="textMultiLine"
+        android:height="200dp" />
+
 
 </RelativeLayout>

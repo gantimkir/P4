@@ -53,6 +53,11 @@
             android:name=".MyPreferenceActivity"
             android:label="@string/settings_title">
         </activity>
+
+        <activity
+            android:name=".ActivityPrefFour"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>
